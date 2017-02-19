@@ -1,0 +1,114 @@
+<html>
+<head>
+<style type="text/css">
+        .style1
+        {
+            text-align: center;
+            font-family: verdana;
+            font-size: large;
+            font: 100% verdana;
+			font-color:pink;
+        }
+        .style2
+        {
+            text-align: center;
+        }
+    </style>
+<script>
+function redirect()
+{
+window.location="admin_login.php";
+}
+function validate()
+{
+var x=document.getElementById("e").value;
+var at=x.indexOf("@");
+var dot = x.lastIndexOf(".");
+if(x.length>=50) 
+{
+  document.getElementById("email").innerHTML="Please enter valid e-mail ID";
+  email.focus();
+  return false;
+}
+if (at<1 || dot<at+2 || dot+2>=x.length)
+  {
+  document.getElementById("email").innerHTML="Not a valid e-mail address";
+  return false;
+  }
+} 
+
+function validate1()
+{
+var a=document.getElementById("a").value
+if(a.length>9 || a.length<9)
+  {
+  document.getElementById("adhar").innerHTML="Enter valid Adhar number";
+  return false;
+  }
+}
+
+
+function blank()
+{
+document.getElementById("e").value="";
+document.getElementById("a").value=""
+}
+</script>
+</head>
+<body bgcolor="cornsilk">
+<center>
+<font color="red"><h2><u>REGISTRATION FORM</u></h2></font><hr>
+<form action="verify.php" method="POST" class="style1">
+<marquee><h4>Choose your Leader Wisely</h4></marquee>
+
+<p><table border=0 cell padding=0 cell spacing=0>
+<tr>
+<td >Email:</td>
+<td><input type="email" name="e1" id="e" onblur= 'validate(this.value)'/></td>
+</tr>
+<br>
+<font color='blue' <span id="email"></div></font>
+<tr>
+<td>Adhar No:</td>
+<td><input type "text" name ="a1" id="a" onblur='validate1(this.value)'/></td>
+</tr>
+<font color='blue' <span id="adhar"></div></font>
+<tr>
+<div id="container" style="width:1200px" >
+<div id="content" allign=right style="background-color:LavenderBlush;height:350px;width:500px;float:right;">
+<Marquee direction="up">Election Campaign For Loksabha elections 2014<br><br><br><br>This Campaign is between 19March-20March<br><br><br><br>Timing are 10am-1pm & 2.00pm to 6.00pm</Marquee>
+
+<td><input type="submit" name="submit" value="start"/></td>&nbsp
+<td><button type="button" onclick=blank()>Reset</button></td>
+<td><button type="button" onclick=redirect()>Admin Access</button></td>
+
+</tr>
+</table>
+
+</form>
+</center>
+<!-- End of the page -->
+<br /></br><br /></br>
+<br /></br><br /></br>
+<br /></br>
+<br /></br>
+
+
+<hr />
+<p align="center">
+<br />
+
+
+
+
+
+<font face="Times New Roman" size="2" color="#999999">Copyright © 1975,Government of India  All rights reserved.</font></p>
+</div>
+
+<div id="bottom"></div>
+
+</div>
+
+<div id="footer"></div>
+</body>
+</html>
